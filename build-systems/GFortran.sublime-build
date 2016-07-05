@@ -11,7 +11,7 @@
 	[
 		{
 			"name": "Run",
-			"shell_cmd": "gfortran \"${file}\" -o \"${file_base_name}\" && \"./${file_base_name}\"",
+			"cmd": ["gfortran", "${file}", "-o", "${file_base_name}", "&&", "./${file_base_name}"],
 			"shell": true,
 			"windows": {
 				"cmd": ["gfortran", "${file}", "-o", "${file_base_name}.exe", "&&", "${file_base_name}.exe"]
